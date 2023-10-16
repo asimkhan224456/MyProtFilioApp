@@ -4,6 +4,7 @@ import 'package:myprotfiolioapp/Resources/AppColors/AppBasicColor.dart';
 import 'package:custom_clippers/custom_clippers.dart';
 import 'package:myprotfiolioapp/Resources/Componets/IntroducationWidget.dart';
 import 'package:myprotfiolioapp/Resources/Componets/ServiceWidget.dart';
+import 'package:myprotfiolioapp/Resources/Componets/WebdevelopmentWidget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({ Key? key }) : super(key: key);
@@ -30,7 +31,19 @@ class _HomeScreenState extends State<HomeScreen> {
         Container(
           child: ServiceWidget(),
         ),
-       
+ SizedBox(
+height: 80.0,
+
+ ),
+
+       Container(
+
+   child: WebdevelopmentWidget(),
+
+       ),
+       SizedBox(
+        height: 100,
+       )
       
            ],
          ),

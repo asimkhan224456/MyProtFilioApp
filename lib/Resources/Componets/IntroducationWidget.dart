@@ -1,4 +1,5 @@
 
+import 'package:lottie/lottie.dart';
 import 'package:myprotfiolioapp/Resources/AppColors/AppBasicColor.dart';
 import 'package:flutter/material.dart';
 import 'package:custom_clippers/custom_clippers.dart';
@@ -77,12 +78,16 @@ class _IntroducationWidgetState extends State<IntroducationWidget> {
                     child: Column(
                           
                       children: <Widget>[
-                 
-                   Spring.slide(
-                    slideType: SlideType.slide_in_right,
+                 Container(child: Lottie.asset(AppAssetsConfig.IntroAnimation,height: 250,width: 300))
+
+
+                   
+                  //  Spring.slide(
+                  //   slideType: SlideType.slide_in_right,
                     
                     
-                    child: Container(child: Image.asset(AppAssetsConfig.IntroImage,height: 300,width: 300,)))
+                  //   child: Container(child: Image.asset(AppAssetsConfig.IntroImage,height: 300,width: 300,))
+                  //   )
                     
                           
                       ],

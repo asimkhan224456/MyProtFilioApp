@@ -46,7 +46,7 @@ const HeaderWidget({ Key? key }) : super(key: key);
   
         child: Column(
           children: <Widget>[
-               Text('Home',style: TextStyle(fontFamily: AppBasicFont.AppBasicFonts,color: Color(BasicAppColor.PrimaryAppColor),fontSize: 14),),
+               Text('Home',style: TextStyle(fontFamily: AppBasicFont.AppBasicFonts,color: Color(BasicAppColor.PrimaryAppColor),fontSize: 15,fontWeight: FontWeight.bold),),
                Icon(Icons.add_home_outlined,color: Color(BasicAppColor.PrimaryAppColor),)
           ],
         ),
@@ -55,7 +55,7 @@ const HeaderWidget({ Key? key }) : super(key: key);
       
         child: Column(
           children: <Widget>[
-               Text('Services',style: TextStyle(fontFamily: AppBasicFont.AppBasicFonts,color: Color(BasicAppColor.PrimaryAppColor),fontSize: 15),),
+               Text('Services',style: TextStyle(fontFamily: AppBasicFont.AppBasicFonts,color: Color(BasicAppColor.PrimaryAppColor),fontSize: 15,fontWeight: FontWeight.bold),),
                Icon(Icons.settings_outlined,color: Color(BasicAppColor.PrimaryAppColor),)
           ],
         ),
@@ -64,7 +64,7 @@ const HeaderWidget({ Key? key }) : super(key: key);
       
         child: Column(
           children: <Widget>[
-               Text('Faq',style: TextStyle(fontFamily: AppBasicFont.AppBasicFonts,color: Color(BasicAppColor.PrimaryAppColor),fontSize: 15),),
+               Text('Faq',style: TextStyle(fontFamily: AppBasicFont.AppBasicFonts,color: Color(BasicAppColor.PrimaryAppColor),fontSize: 15,fontWeight: FontWeight.bold),),
                Icon(Icons.info_outline_rounded,color: Color(BasicAppColor.PrimaryAppColor),)
           ],
         ),
@@ -73,7 +73,7 @@ const HeaderWidget({ Key? key }) : super(key: key);
       
         child: Column(
           children: <Widget>[
-               Text('Protfolio',style: TextStyle(fontFamily: AppBasicFont.AppBasicFonts,color: Color(BasicAppColor.PrimaryAppColor),fontSize: 15),),
+               Text('Protfolio',style: TextStyle(fontFamily: AppBasicFont.AppBasicFonts,color: Color(BasicAppColor.PrimaryAppColor),fontSize: 15,fontWeight: FontWeight.bold),),
                Icon(Icons.description_outlined,color: Color(BasicAppColor.PrimaryAppColor),)
           ],
         ),

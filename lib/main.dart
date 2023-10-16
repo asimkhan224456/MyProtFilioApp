@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:myprotfiolioapp/Resources/AssetsConfig/AppAssetsConfig.dart';
 import 'package:myprotfiolioapp/Views/HomeScreen.dart';
-
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -19,7 +20,12 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomeScreen(),
+      home: AnimatedSplashScreen(
+      splash: AppAssetsConfig.SplashLogo,
+      nextScreen: HomeScreen(),
+      splashTransition: SplashTransition.scaleTransition,
+    
+    ),
     );
   }
 }

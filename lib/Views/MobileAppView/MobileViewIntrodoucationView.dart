@@ -1,25 +1,20 @@
-
+import 'package:custom_clippers/custom_clippers.dart';
+import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:myprotfiolioapp/Resources/AppColors/AppBasicColor.dart';
-import 'package:flutter/material.dart';
-import 'package:custom_clippers/custom_clippers.dart';
 import 'package:myprotfiolioapp/Resources/AssetsConfig/AppAssetsConfig.dart';
 import 'package:myprotfiolioapp/Resources/AssetsConfig/AppFonts.dart';
-import 'package:myprotfiolioapp/Resources/Componets/ResumeWidget.dart';
 import 'package:spring/spring.dart';
 import 'package:url_launcher/url_launcher.dart';
-class IntroducationWidget extends StatefulWidget {
-  const IntroducationWidget({ Key? key }) : super(key: key);
+
+
+
+class MobileViewIntrodoucationView extends StatelessWidget {
+const MobileViewIntrodoucationView({ Key? key }) : super(key: key);
 
   @override
-  _IntroducationWidgetState createState() => _IntroducationWidgetState();
-}
-
-class _IntroducationWidgetState extends State<IntroducationWidget> {
-    
-final Uri _url = Uri.parse('https://drive.google.com/file/d/1SQY9_aJpq9YhyVEr-3wtg5nn9aH8gdE_/view?usp=share_link');
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
+    final Uri _url = Uri.parse('https://drive.google.com/file/d/1SQY9_aJpq9YhyVEr-3wtg5nn9aH8gdE_/view?usp=share_link');
     return ClipPath(
         clipper: SinCosineWaveClipper(verticalPosition: VerticalPosition.bottom),
       child: Container(
@@ -41,7 +36,7 @@ final Uri _url = Uri.parse('https://drive.google.com/file/d/1SQY9_aJpq9YhyVEr-3w
               padding: EdgeInsets.only(top: 120),
               child: Spring.slide(
                 slideType: SlideType.slide_in_left,
-                child: Row(
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
                   Container(
@@ -50,9 +45,9 @@ final Uri _url = Uri.parse('https://drive.google.com/file/d/1SQY9_aJpq9YhyVEr-3w
                     child: Column(
                           
                       children: <Widget>[
-                      Text('Hey ! I,m Asim Khan',style: TextStyle(fontFamily: AppBasicFont.AppBasicFonts,fontSize: 35,color: Color(BasicAppColor.PrimaryAppColor),fontWeight: FontWeight.bold),),
+                      Text('Hey ! I,m Asim Khan',style: TextStyle(fontFamily: AppBasicFont.AppBasicFonts,fontSize: 15,color: Color(BasicAppColor.PrimaryAppColor),fontWeight: FontWeight.bold),),
                                           SizedBox(height: 10,),
-                      Text('Full-Stack Cross-Platform Mobile Application Developer',style: TextStyle(fontFamily: AppBasicFont.AppBasicFonts,fontSize: 18,color: Color(BasicAppColor.PrimaryAppColor))),
+                      Text('Full-Stack Cross-Platform Mobile Application Developer',style: TextStyle(fontFamily: AppBasicFont.AppBasicFonts,fontSize: 10,color: Color(BasicAppColor.PrimaryAppColor))),
                       SizedBox(height: 20,),
                       GestureDetector(
                         onTap:(){
@@ -85,21 +80,15 @@ final Uri _url = Uri.parse('https://drive.google.com/file/d/1SQY9_aJpq9YhyVEr-3w
                     ),
                   ),
                        Container(
+                        height: 250,
                     width: 500,
                     child: Column(
                           
                       children: <Widget>[
-                 Container(child: Lottie.asset(AppAssetsConfig.IntroAnimation,height: 250,width: 300))
+                 Container(child: Lottie.asset(AppAssetsConfig.IntroAnimation,height: 150,width: 300))
 
 
-                   
-                  //  Spring.slide(
-                  //   slideType: SlideType.slide_in_right,
-                    
-                    
-                  //   child: Container(child: Image.asset(AppAssetsConfig.IntroImage,height: 300,width: 300,))
-                  //   )
-                    
+              
                           
                       ],
                     ),
@@ -113,16 +102,11 @@ final Uri _url = Uri.parse('https://drive.google.com/file/d/1SQY9_aJpq9YhyVEr-3w
       ),
     );
   }
-
-
-
-Future<void> _launchUrl(ProjectUrl) async {
+  Future<void> _launchUrl(ProjectUrl) async {
   if (!await launchUrl(ProjectUrl)) {
     throw Exception('Could not launch');
   }
 
 
 }
-
-
 }

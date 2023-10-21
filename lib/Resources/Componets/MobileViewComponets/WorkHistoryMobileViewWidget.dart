@@ -1,27 +1,24 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:myprotfiolioapp/Resources/AppColors/AppBasicColor.dart';
 import 'package:myprotfiolioapp/Resources/AppContentStatic/AppContent.dart';
 import 'package:myprotfiolioapp/Resources/AssetsConfig/AppAssetsConfig.dart';
 import 'package:myprotfiolioapp/Resources/AssetsConfig/AppFonts.dart';
-import 'package:myprotfiolioapp/Resources/CommonUrls/AppUrls.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class WorkHistoryWidget extends StatefulWidget {
-  const WorkHistoryWidget({ Key? key }) : super(key: key);
+
+class WorkHistoryMobileViewWidget extends StatefulWidget {
+  const WorkHistoryMobileViewWidget({ Key? key }) : super(key: key);
 
   @override
-  _WorkHistoryWidgetState createState() => _WorkHistoryWidgetState();
+  _WorkHistoryMobileViewWidgetState createState() => _WorkHistoryMobileViewWidgetState();
 }
 
-class _WorkHistoryWidgetState extends State<WorkHistoryWidget> {
-  
-final Uri _url = Uri.parse('https://play.google.com/store/apps/details?id=com.alefah.asim.alefah');
+class _WorkHistoryMobileViewWidgetState extends State<WorkHistoryMobileViewWidget> {
+  final Uri _url = Uri.parse('https://play.google.com/store/apps/details?id=com.alefah.asim.alefah');
 final Uri _CTCURL = Uri.parse('https://collaborationtechs.com/');
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return  Container(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -32,7 +29,7 @@ final Uri _CTCURL = Uri.parse('https://collaborationtechs.com/');
 
   SizedBox(height: 40.0,),
 
-  Row(
+  Column(
     mainAxisAlignment: MainAxisAlignment.spaceAround,
     children: <Widget>[
      Container(
@@ -54,7 +51,7 @@ final Uri _CTCURL = Uri.parse('https://collaborationtechs.com/');
        ),
       
 
-   SizedBox(height: 100,),
+   SizedBox(height: 10,),
 
         Column(
          children: <Widget>[
@@ -78,6 +75,7 @@ final Uri _CTCURL = Uri.parse('https://collaborationtechs.com/');
                ],
              )
      ),
+        SizedBox(height: 10,),
      Container(
       height: 600,
       width: 350,
@@ -152,14 +150,11 @@ _launchUrl(_CTCURL);
 
 
 
-Future<void> _launchUrl(ProjectUrl) async {
+  Future<void> _launchUrl(ProjectUrl) async {
   if (!await launchUrl(ProjectUrl)) {
     throw Exception('Could not launch');
   }
 
 
 }
-
-
-
 }

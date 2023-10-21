@@ -38,6 +38,7 @@ const HeaderWidget({ Key? key }) : super(key: key);
       ),
       Container(
         width: 650,
+        height: 250,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[

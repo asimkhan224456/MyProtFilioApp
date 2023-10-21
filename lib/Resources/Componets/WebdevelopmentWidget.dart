@@ -33,7 +33,10 @@ class _WebdevelopmentWidgetState extends State<WebdevelopmentWidget> {
     width: 500,
     child: Column(
       children: <Widget>[
-       Text('Web  Development',style: TextStyle(fontFamily: AppBasicFont.AppBasicFonts,fontSize: 25,color: Color(BasicAppColor.ActionColor)),),
+       Text('Web  Development',style: TextStyle(fontFamily: AppBasicFont.AppBasicFonts,fontSize: 25,color: Color(BasicAppColor.ActionColor)
+       ),
+       
+       ),
          SizedBox(height: 5,),
   // First Heading Start from Here 
             Row(
@@ -91,6 +94,36 @@ class _WebdevelopmentWidgetState extends State<WebdevelopmentWidget> {
                          ),       
              ),
 
+ Container(
+              margin: EdgeInsets.only(right: 5.0),
+               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.only(right: 70.0),
+                  child: Icon(Icons.arrow_right_alt_outlined,color: Color(BasicAppColor.ActionColor),)),
+             
+                Container(
+                margin: EdgeInsets.only(left: 5),
+                  child: Text(AppContentWeb.WebAppHeading6,style: TextStyle(fontFamily: AppBasicFont.AppBasicFonts,fontWeight: FontWeight.bold),))
+                ],
+                         ),       
+             ),
+             Container(
+              margin: EdgeInsets.only(right: 5.0),
+               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.only(right: 50.0),
+                  child: Icon(Icons.arrow_right_alt_outlined,color: Color(BasicAppColor.ActionColor),)),
+             
+                Container(
+                margin: EdgeInsets.only(left: 5),
+                  child: Text(AppContentWeb.WebAppHeading7,style: TextStyle(fontFamily: AppBasicFont.AppBasicFonts,fontWeight: FontWeight.bold),))
+                ],
+                         ),       
+             ),
       ],
     ),
   )

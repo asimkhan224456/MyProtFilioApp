@@ -19,7 +19,10 @@ class _ServiceWidgetState extends State<ServiceWidget> {
     return Container(
       child: Column(
         children: <Widget>[
-   Text('Services',style: TextStyle(fontFamily: AppBasicFont.AppBasicFonts,fontSize: 40,fontWeight: FontWeight.bold),),
+   Text('Services',style: TextStyle(fontFamily: AppBasicFont.AppBasicFonts,fontSize: 30,fontWeight: FontWeight.w400),),
+  Icon(Icons.line_style_rounded,color: Color(BasicAppColor.ActionColor),),
+
+
    SizedBox(height: 50,),
 
    // Mobile App Services Start Form Here 

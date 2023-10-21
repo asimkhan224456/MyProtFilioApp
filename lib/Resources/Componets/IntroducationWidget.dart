@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:custom_clippers/custom_clippers.dart';
 import 'package:myprotfiolioapp/Resources/AssetsConfig/AppAssetsConfig.dart';
 import 'package:myprotfiolioapp/Resources/AssetsConfig/AppFonts.dart';
+import 'package:myprotfiolioapp/Resources/Componets/ResumeWidget.dart';
 import 'package:spring/spring.dart';
+import 'package:url_launcher/url_launcher.dart';
 class IntroducationWidget extends StatefulWidget {
   const IntroducationWidget({ Key? key }) : super(key: key);
 
@@ -14,6 +16,8 @@ class IntroducationWidget extends StatefulWidget {
 }
 
 class _IntroducationWidgetState extends State<IntroducationWidget> {
+    
+final Uri _url = Uri.parse('https://drive.google.com/file/d/18vigtx13W4GUzhsUZ7bejOMv2NGyCJZx/view?usp=sharing');
   @override
   Widget build(BuildContext context) {
     return ClipPath(
@@ -50,21 +54,28 @@ class _IntroducationWidgetState extends State<IntroducationWidget> {
                                           SizedBox(height: 10,),
                       Text('Full-Stack Cross-Platform Mobile Application Developer',style: TextStyle(fontFamily: AppBasicFont.AppBasicFonts,fontSize: 18,color: Color(BasicAppColor.PrimaryAppColor))),
                       SizedBox(height: 20,),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(20.0),
-                        child: Container(
-                          height: 50,
-                          width: 150,
-                          color: Color(BasicAppColor.PrimaryAppColor),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: <Widget>[
-                              
-                              Text('Download CV',style: TextStyle(fontFamily: AppBasicFont.AppBasicFonts,fontSize: 14,fontWeight: FontWeight.bold),),
-                              Icon(Icons.arrow_right,)
-                      
-                      
-                            ],
+                      GestureDetector(
+                        onTap:(){
+
+                          // Navigator.of(context).push(MaterialPageRoute(builder: (context)=>ResumeWidget()));
+                          _launchUrl(_url);
+                        },
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20.0),
+                          child: Container(
+                            height: 50,
+                            width: 150,
+                            color: Color(BasicAppColor.PrimaryAppColor),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: <Widget>[
+                                
+                                Text('Download CV',style: TextStyle(fontFamily: AppBasicFont.AppBasicFonts,fontSize: 14,fontWeight: FontWeight.bold),),
+                                Icon(Icons.arrow_right,)
+                        
+                        
+                              ],
+                            ),
                           ),
                         ),
                       )
@@ -102,4 +113,16 @@ class _IntroducationWidgetState extends State<IntroducationWidget> {
       ),
     );
   }
+
+
+
+Future<void> _launchUrl(ProjectUrl) async {
+  if (!await launchUrl(ProjectUrl)) {
+    throw Exception('Could not launch');
+  }
+
+
+}
+
+
 }

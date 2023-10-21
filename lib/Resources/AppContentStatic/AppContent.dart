@@ -24,6 +24,30 @@ static const String WebAppHeading2="Portfolio Web App(For Business,For Individua
 static const String WebAppHeading3="Maintenance of Existing Websites or Web Applications";   
 static const String WebAppHeading4="RestFul Api Devlopement";
 static const String WebAppHeading5="Web Design & Development From Scratch";
+static const String WebAppHeading6="Website Hosting and Devlopement";
+static const String WebAppHeading7="Domain (DNS) Transfer or Registration";
+
+}
 
 
+class AppContentUiDesing {
+static const String  UiDesignHeading1="User Interface (UI) Design";
+static const String UiDesigTag1="I create visually appealing and intuitive interfaces that enhance user interaction and engagement. This includes designing the layout of digital products like websites, apps, and software with a focus on aesthetics and user accessibility";
+static const String  UiDesignHeading2="User Experience (UX) Design";
+static const String UiDesigTag2="I focus on improving the overall experience of the users when they interact with your digital product.\n This involves conducting user research, creating user personas, designing wireframes, and testing prototypes to ensure a seamless and enjoyable user experience";
+static const String  UiDesignHeading3="Responsive Design";
+static const String UiDesigTag3="I ensure that your digital products look great and function well on all devices and screen sizes, providing a consistent experience for all users";
+static const String  UiDesignHeading4="Usability Testing";
+static const String UiDesigTag4="I conduct usability tests to identify any issues or areas of improvement in the design. This helps in enhancing the effectiveness, efficiency, and satisfaction of the user interface";
+static const String  UiDesignHeading5="Interaction Design";
+static const String UiDesigTag5="I design interactive elements to facilitate better communication between your users and your digital products. This includes creating micro-interactions, animations, and transitions that guide users through their digital journey.";
+static const String  UiDesignHeading6="User-Centered Design";
+static const String UiDesigTag6="At the heart of my design process is the user. I employ a user-centered approach to design, which involves \n understanding the needs and behaviors of the users, and designing solutions that align with those needs.With my UI/UX design services, you can expect a boost in user engagement, improved user satisfaction, and ultimately, an increase in conversion rates. Let’s create amazing digital experiences together!";
+
+}
+
+
+class ProjectContent {
+static const String ApcApplication='Major Features of the Application \n 1)  Appiontment Booking \n 2)  Medical History \n 3)  Real-time Notifications\n 4)  Consent Form \n  5) Invoice History \n 6) Digital Signature  \n 7) Vaccination History';
+static const String CTCWebsite='Major Features of the Website is \n 1) Services Detail \n 2) Project Details \n 3) Get Quoteation   ';
 }
